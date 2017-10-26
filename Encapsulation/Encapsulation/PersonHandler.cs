@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -112,5 +113,42 @@ namespace Encapsulation
         }
 
 
+        public void AddPersonFromConsole()
+        {
+            do
+            {
+                Console.Write("Please input the first name:");
+                string fname = Console.ReadLine();
+                if (String.IsNullOrEmpty(fname)) break;
+
+                Console.Write("Please input the last name:");
+                string lname = Console.ReadLine();
+                if (String.IsNullOrEmpty(lname)) break;
+
+                Console.Write("Please input the age:");
+                int age = 0;
+                if (!int.TryParse(Console.ReadLine(), out age))
+                {
+                    Console.WriteLine("Age couldn't be parsed");
+                }
+
+                Console.Write("Please input the height:");
+                double height = 0;
+                if (!double.TryParse(Console.ReadLine(), NumberStyles.Float, CultureInfo.InvariantCulture, out height))
+                {
+                    Console.WriteLine("Height couldn't be parsed");
+                }
+
+                Console.Write("Please input the weight:");
+                double weight = 0;
+                if (!double.TryParse(Console.ReadLine(), NumberStyles.Float, CultureInfo.InvariantCulture, out weight))
+                {
+                    Console.WriteLine("Height couldn't be parsed");
+                }
+                Console.WriteLine("---------------------------");
+                Console.WriteLine(PrintPerson(age, fname, lname, height, weight));
+            } while (true);
+            
+        }
     }
 }
