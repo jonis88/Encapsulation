@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Encapsulation
 {
-    class TextInputError : UserError
+    class DateInputError : UserError
     {
         public override string UEMessage()
         {
-            return "You tried to use a text input in a numeric only field. This fired an error!";
+            return "Your tried to use a wrong format in a date time only field. This fired an error!";
         }
     }
 }

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Encapsulation
 {
-    class TextInputError : UserError
+    class NullInputError : UserError
     {
         public override string UEMessage()
         {
-            return "You tried to use a text input in a numeric only field. This fired an error!";
+            return "Your tried to input null or empty value in a requied field. This fired an error!";
         }
     }
 }

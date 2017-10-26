@@ -49,12 +49,26 @@ namespace Encapsulation
             dog2.Age = 14;
             dog2.Bark = false;
 
+            Horse horse1 = new Horse();
+            horse1.Name = "Pony";
+            horse1.Weight = 65;
+            horse1.Age = 10;
+            horse1.Shoes = true;
+
+            Hedgehog hedge1 = new Hedgehog();
+            hedge1.Name = "Hegy";
+            hedge1.Age = 5;
+            hedge1.Weight = 2;
+            hedge1.NoOfSpikes = 150;
+
             //Add animals to list
             list.Add(dog1);
             list.Add(peli1);
             list.Add(swan1);
             list.Add(flam1);
             list.Add(dog2);
+            list.Add(horse1);
+            list.Add(hedge1);
 
             //Print all animals in list
             foreach (var Animal in list)
@@ -75,11 +89,14 @@ namespace Encapsulation
 
             //Create list for UserError
             List<UserError> error = new List<UserError>();
-            
+
             //Add to error list
             error.Add(new TextInputError());
             error.Add(new NumericInputError());
-            
+            error.Add(new DateInputError());
+            error.Add(new EmailInputError());
+            error.Add(new NullInputError());
+
             //Loop for listing the errors
             foreach (var UserError in error)
             {
@@ -87,15 +104,8 @@ namespace Encapsulation
             }
             Console.ReadKey();
 
-            /// <summary>
-            /// Main method to get and print out all information of person
-            /// </summary>
-            /// <param name="args"></param>
+
             bool continued = true;
-            //Instantiate a new Person, but could not directly access the variables, because they are private fields
-            //Person per = new Person();
-
-
             do
             {
                 //Instantiate a new PersonHandler
@@ -105,7 +115,6 @@ namespace Encapsulation
                 continued = AddPersonFromConsole(perhandler);
             }
             while (continued);
-
             Console.ReadKey();
         }
 
