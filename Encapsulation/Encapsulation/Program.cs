@@ -18,7 +18,7 @@ namespace Encapsulation
             PersonHandler p2 = new PersonHandler();
             p2.CreatePerson(20, "Jane", "Doe", 170, 55);
 
-            Console.WriteLine(p1.Age);
+            
 
             //var person = new Person
             //{
