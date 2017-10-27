@@ -15,6 +15,10 @@ namespace Encapsulation
             get { return likesFish; }
             set { likesFish = value; }
         }
+        public Pelican () { }
+        public Bird(string nam, int wei, int age, int win) :
+            base(nam, wei, age)
+        { Wingspan = win; }
 
         public override string Stats()
         {

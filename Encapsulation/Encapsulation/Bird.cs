@@ -17,6 +17,11 @@ namespace Encapsulation
         }
         //Add property that apply to all birds here.
 
+        public Bird() { }
+        public Bird(string nam, int wei, int age, int win) :
+            base(nam, wei, age)
+        { Wingspan = win; }
+
         public override string Stats()
         {
             return base.Stats() + "\nWith an wingspan of " + Wingspan;
