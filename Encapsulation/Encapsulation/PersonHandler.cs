@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace Encapsulation
     /// </summary>
     public class PersonHandler
     {
-        
+
 
         /// <summary>
         /// Set age of the person
@@ -103,13 +104,15 @@ namespace Encapsulation
         /// <summary>
         /// Print out the string contain information of person
         /// </summary>
-        public string PrintPerson(int age, string fname, string lname, double height, double weight)
+        public string PrintPerson(Person per)
         {
-           Person per = CreatePerson(age, fname, lname, height, weight);
-           string output = "Name: " + GetName(per) + "\nAge: " + GetAge(per) + "\nHeight: " + GetHeight(per) + " cm \nWeight: " + GetWeight(per) + " kg \n";
+           string output = "Name: " + GetName(per) + "\nAge: " + per.Age+ "\nHeight: " + per.Height + " cm \nWeight: " + per.Weight + " kg \n";
                       
            return output;
         }
+
+
+       
 
 
     }

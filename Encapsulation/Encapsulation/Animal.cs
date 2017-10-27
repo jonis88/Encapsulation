@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Encapsulation
 {
-    class Animal
+    public class Animal
     {
         //Properties of animals
         private string name;
@@ -46,10 +46,6 @@ namespace Encapsulation
                 "\nAnd is " + Age + "years old";
         }
 
-        public virtual string Speak()
-        {
-            return "";
-        }
 
     }
 }

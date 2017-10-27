@@ -16,7 +16,7 @@ namespace Encapsulation
             set { bark = value; }
         }
 
-        public override string Speak()
+        public string Speak()
         {
             return "Woff!";
         }

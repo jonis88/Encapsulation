@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Encapsulation
 {
-    abstract class UserError
+    public abstract class UserError
     {
         public abstract string UEMessage();
     }
